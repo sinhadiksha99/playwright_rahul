@@ -1,5 +1,5 @@
 import { expect, request, test } from "@playwright/test";
-import { APIUtilsOptimize } from "./utils/APIUtils";
+import { APIUtilsOptimize } from "../utils/APIUtils";
 
 let response: any;
 let fakePayloadOrder = { data: [], message: "No Orders" };
