@@ -1,5 +1,14 @@
 import { expect, Locator, test } from "@playwright/test";
 import { POManager } from "../pageObjects/POManager";
+import * as fs from "fs"; 
+import path from "path";
+
+const loginData = JSON.parse(
+    fs.readFileSync(
+        path.join(__dirname, "../utils/shoppingData.json"),
+        "utf-8"
+    )
+)
 
 test("e-commerce", async ({ page }) => {
     const manager = new POManager(page);
